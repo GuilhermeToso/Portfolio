@@ -19,9 +19,9 @@ const Template = () => {
       <Header opened={openBottomNav} openNav={setOpenBottomNav} tabValue={tabValue} setTabValue={setTabValue}></Header>
       <Home></Home>
       <About></About>
+      <Portfolio></Portfolio>
       <Skills></Skills>
       <Services></Services>
-      <Portfolio></Portfolio>
       <Contact></Contact>
       <BottomNav opened={openBottomNav} tabValue={tabValue} setTabValue={setTabValue}></BottomNav>
     </Grid>
