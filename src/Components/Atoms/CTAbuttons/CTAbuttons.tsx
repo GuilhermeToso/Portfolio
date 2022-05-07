@@ -4,6 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { motion } from 'framer-motion'
 import DownloadIcon from '@mui/icons-material/Download';
 import { theme } from '../../../styles';
+import { Link } from "react-scroll"
 
 const CTAbuttons = () => {
 
@@ -46,17 +47,27 @@ const CTAbuttons = () => {
               </CTAButtonText>
             </CTAButton>
             <div style={{width:"10px"}}></div>
-            <CTAButton
-              variant="contained"
-              sx={{zIndex:"1"}}
+            <Link
+              to="/about"
+              spy={true} 
+              smooth={true} 
+              offset={50} 
+              duration={500}
+              onClick={()=>{props.setTabValue(props.state)}}
             >
-              <CTAButtonText
-                fontFamily={theme.typography.fontFamily.title}
-                fontWeight="600"
+              <CTAButton
+                variant="contained"
+                sx={{zIndex:"1"}}
               >
-                {t("lets_talk")}
-              </CTAButtonText>
-            </CTAButton>
+                <CTAButtonText
+                  fontFamily={theme.typography.fontFamily.title}
+                  fontWeight="600"
+                >
+                  {t("lets_talk")}
+                </CTAButtonText>
+              </CTAButton>
+            </Link>
+            
         </motion.div>
     </CTAbuttonsBox>
   )
