@@ -1,8 +1,7 @@
 import React from 'react'
 import { BottomNavBox, BottomNavPaper, styles, BottomNavGrid } from './BottomNav.styles'
 import {motion} from "framer-motion"
-import { BottomNavigation, Grid, Typography, ButtonBase, Divider } from '@mui/material';
-import { BottomNavigationAction } from '@mui/material';
+import { Grid, Typography, ButtonBase, Divider } from '@mui/material';
 import { Link } from "react-scroll";
 import { UilEstate, UilUser, UilBagAlt, UilWrench, UilFileAlt, UilMessage } from '@iconscout/react-unicons'
 
@@ -30,37 +29,39 @@ const BottomNav = (props:BottomNavProps) => {
   }
 
   const navLinksUp = [
-      {
-        to:"home",
-        text:"Home",
-        icon:<UilEstate/>
-      },
-      {
-        to:"about",
-        text:"About",
-        icon:<UilUser/>
-      },
-      {
-        to:"skills",
-        text:"Skills",
-        icon:<UilWrench/>
-      },]
+        {
+            to:"home",
+            text:"Home",
+            icon:<UilEstate/>
+        },
+        {
+            to:"about",
+            text:"About",
+            icon:<UilUser/>
+        },
+        {
+            to:"portfolio",
+            text:"Portfolio",
+            icon:<UilFileAlt/>
+        },
+    ]
     const navLinksDown = [
-      {
-        to:"services",
-        text:"Services",
-        icon:<UilBagAlt/>
-      },
-      {
-        to:"portfolio",
-        text:"Portfolio",
-        icon:<UilFileAlt/>
-      },
-      {
-        to:"contact",
-        text:"Contact",
-        icon:<UilMessage/>
-      },
+        {
+            to:"skills",
+            text:"Skills",
+            icon:<UilWrench/>
+            },
+        {
+            to:"services",
+            text:"Services",
+            icon:<UilBagAlt/>
+        },
+        
+        {
+            to:"contact",
+            text:"Contact",
+            icon:<UilMessage/>
+        },
   ]
 
 
