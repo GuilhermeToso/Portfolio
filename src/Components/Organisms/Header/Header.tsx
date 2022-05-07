@@ -1,13 +1,11 @@
 import React, {useState} from 'react'
 import { HeaderGrid } from './Header.styles'
-import { Grid } from '@mui/material'
 import { LogoSection } from '../../Molecules/LogoSection'
 import { Nav } from '../../Molecules/Nav'
 import { HeaderEmpty } from '../../Molecules/HeaderEmpty'
 import { MenuBar } from '../../Molecules/MenuBar'
 import { LanguageButton } from '../../Molecules/LanguageButton'
 import { LanguageMenu } from '../../Molecules/LanguageMenu'
-import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 
 export interface LanguagesProps {
