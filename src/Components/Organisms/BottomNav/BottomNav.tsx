@@ -1,18 +1,15 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { BottomNavBox, BottomNavPaper, styles, BottomNavGrid } from './BottomNav.styles'
 import {motion} from "framer-motion"
 import { Grid, Typography, ButtonBase, Divider } from '@mui/material';
 import { Link } from "react-scroll";
 import { UilEstate, UilUser, UilBagAlt, UilWrench, UilFileAlt, UilMessage } from '@iconscout/react-unicons'
+import { NavigationContext } from '../../../Contexts';
 
-interface BottomNavProps {
-    opened: boolean;
-    tabValue: number;
-    setTabValue: React.Dispatch<React.SetStateAction<number>>
-}
 
-const BottomNav = (props:BottomNavProps) => {
+const BottomNav = () => {
 
+  const {openBottomNav, tabValue, handleTabValue} = useContext(NavigationContext)
   const variants = {
       show: {
         height:"100%",
@@ -69,20 +66,21 @@ const BottomNav = (props:BottomNavProps) => {
       <BottomNavBox>
         <motion.div
             variants={variants}
-            animate={props.opened ? 'show' : 'notShow'}
+            initial={false}
+            animate={openBottomNav ? 'show' : 'notShow'}
             style={styles}
         >
             <BottomNavPaper elevation={16}>
 
                 <BottomNavGrid container spacing={2} justifyContent="space-around" sx={{borderRadius:"25px 25px 0 0"}}>
                     {
-                        navLinksUp.map((item:{to:string,text:string,icon:React.Node}) => {
+                        navLinksUp.map((item:{to:string,text:string,icon:JSX.Element}) => {
                             return (
                                 <Grid key={item.to} item xs={4} container justifyContent="center" justifyItems="center">
                                     <ButtonBase disableRipple>
                                         <Link
                                             to={item.to} spy={true} smooth={true} offset={50} 
-                                            duration={500} onClick={()=>{props.setTabValue(props.tabValue)}}
+                                            duration={500} onClick={()=>{handleTabValue(tabValue)}}
                                         >
                                             {item.icon}
                                             <Typography variant='body1'>{item.text}</Typography>
@@ -96,13 +94,13 @@ const BottomNav = (props:BottomNavProps) => {
                 <Divider sx={{position:"relative", width:"80%", margin:"auto"}}></Divider>
                 <BottomNavGrid container spacing={2} justifyContent="space-around" sx={{borderRadius:"25px 25px 0 0"}}>
                     {
-                        navLinksDown.map((item:{to:string,text:string,icon:React.Node}) => {
+                        navLinksDown.map((item:{to:string,text:string,icon:JSX.Element}) => {
                             return (
                                 <Grid key={item.to} item xs={4} container justifyContent="center" justifyItems="center">
                                     <ButtonBase disableRipple>
                                         <Link
                                             to={item.to} spy={true} smooth={true} offset={50} 
-                                            duration={500} onClick={()=>{props.setTabValue(props.tabValue)}}
+                                            duration={500} onClick={()=>{handleTabValue(tabValue)}}
                                         >
                                             {item.icon}
                                             <Typography variant='body1'>{item.text}</Typography>
