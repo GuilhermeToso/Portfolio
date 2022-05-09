@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { CTAbuttonsBox, styles, CTAButton, CTAButtonText } from './CTAbuttons.styles'
 import { useTranslation } from 'next-i18next'
 import { motion } from 'framer-motion'
 import DownloadIcon from '@mui/icons-material/Download';
 import { theme } from '../../../styles';
 import { Link } from "react-scroll"
+import { NavigationContext } from '../../../Contexts';
 
 const CTAbuttons = () => {
 
@@ -24,6 +25,7 @@ const CTAbuttons = () => {
   }
   
   const {t} = useTranslation("home")
+  const {handleTabValue} = useContext(NavigationContext)
 
   return (
     <CTAbuttonsBox>
@@ -48,12 +50,12 @@ const CTAbuttons = () => {
             </CTAButton>
             <div style={{width:"10px"}}></div>
             <Link
-              to="/about"
+              to="about"
               spy={true} 
               smooth={true} 
               offset={50} 
               duration={500}
-              onClick={()=>{props.setTabValue(props.state)}}
+              onClick={()=>{handleTabValue(1)}}
             >
               <CTAButton
                 variant="contained"
