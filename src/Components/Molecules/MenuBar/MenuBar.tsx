@@ -5,7 +5,7 @@ import { MenuBarGrid, IconButton, WidgetIcon } from './MenuBar.styles'
 
 const MenuBar = () => {
 
-  const {openBottomNav, handleOpenBottomNav} = useContext(NavigationContext)
+  const {handleOpenBottomNav} = useContext(NavigationContext)
 
 
   return (
