@@ -16,14 +16,8 @@ export interface LanguagesProps {
   handleClose: () => void;
 }
 
-export interface OpenBottomNavProps {
-  openNav: React.Dispatch<React.SetStateAction<boolean>>;
-  opened: boolean;
-  tabValue: number;
-  setTabValue: React.Dispatch<React.SetStateAction<number>>
-}
 
-const Header = (props:OpenBottomNavProps) => {
+const Header = () => {
 
   const router = useRouter()
 
@@ -47,10 +41,10 @@ const Header = (props:OpenBottomNavProps) => {
 
   return (
     <HeaderGrid item container xs={12}>
-        <LogoSection setTabValue={props.setTabValue}></LogoSection>
-        <Nav tabValue={props.tabValue} setTabValue={props.setTabValue} router={router}></Nav>
+        <LogoSection></LogoSection>
+        <Nav router={router}></Nav>
         <HeaderEmpty/>
-        <MenuBar opened={props.opened} openNav={props.openNav}></MenuBar>
+        <MenuBar></MenuBar>
         <LanguageMenu states={languageStates} router={router}></LanguageMenu>
         <LanguageButton event={handleClick} open={open}></LanguageButton>
     </HeaderGrid>
