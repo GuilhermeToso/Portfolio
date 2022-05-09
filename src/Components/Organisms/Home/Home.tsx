@@ -1,9 +1,9 @@
 import Image from 'next/image'
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import { HomePhoto } from '../../Molecules/HomePhoto'
 import { PageGrid } from '../Styles'
-import { useViewport } from '../../../Hooks'
 import { Presentation } from '../../Molecules/Presentation'
+
 
 const Home = () => {
   
