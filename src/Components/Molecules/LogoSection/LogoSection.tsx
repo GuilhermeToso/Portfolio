@@ -1,11 +1,12 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { LogoGrid, LogoContainer, LogoBox, Link } from './LogoSection.styles'
-import { NameLogo, RubricLogo } from '../../Atoms/Logo'
+import { RubricLogo } from '../../Atoms/Logo'
+import { NavigationContext } from '../../../Contexts'
 
-interface LogoProps {
-  setTabValue: React.Dispatch<React.SetStateAction<number>>;
-}
-const LogoSection = (props: LogoProps) => {
+const LogoSection = () => {
+
+  const {handleTabValue} = useContext(NavigationContext)
+
   return (
     <LogoGrid item xs={2} container>
       <LogoContainer>
@@ -16,7 +17,7 @@ const LogoSection = (props: LogoProps) => {
           offset={50} 
           duration={800}
           onClick = {() => {
-            props.setTabValue(0)
+            handleTabValue(0)
           }}
         >
           <LogoBox >
