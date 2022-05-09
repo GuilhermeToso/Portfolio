@@ -1,20 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { NavigationContext } from '../../../Contexts'
 import { MenuBarGrid, IconButton, WidgetIcon } from './MenuBar.styles'
 
-interface MenuBarProps {
-  openNav: React.Dispatch<React.SetStateAction<boolean>>;
-  opened: boolean;
-}
-const MenuBar = (props:MenuBarProps) => {
 
-  function handleClick() {
-    props.openNav(!props.opened)
-    console.log(props.opened)
-  }
+const MenuBar = () => {
+
+  const {openBottomNav, handleOpenBottomNav} = useContext(NavigationContext)
+
 
   return (
     <MenuBarGrid item md={0} xs={1} justifyItems="center" justifyContent="center">
-        <IconButton disableRipple onClick={handleClick}> 
+        <IconButton disableRipple onClick={handleOpenBottomNav}> 
             <WidgetIcon></WidgetIcon>
         </IconButton>
     </MenuBarGrid>
