@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Grid } from '@mui/material'
 import { Home } from '../Organisms/Home'
 import { Header } from '../Organisms/Header'
@@ -8,23 +8,26 @@ import { Portfolio } from '../Organisms/Portfolio'
 import { Services } from '../Organisms/Services'
 import { Contact } from '../Organisms/Contact'
 import { BottomNav } from "../Organisms/BottomNav"
+import { NavigationContext, useNavigationContext } from '../../Contexts'
 
 const Template = () => {
 
-  const [openBottomNav, setOpenBottomNav] = useState(false)
-  const [tabValue, setTabValue] = useState<number>(0)
+  const values = useNavigationContext()
 
   return (
-    <Grid container>
-      <Header opened={openBottomNav} openNav={setOpenBottomNav} tabValue={tabValue} setTabValue={setTabValue}></Header>
-      <Home></Home>
-      <About></About>
-      <Portfolio></Portfolio>
-      <Skills></Skills>
-      <Services></Services>
-      <Contact></Contact>
-      <BottomNav opened={openBottomNav} tabValue={tabValue} setTabValue={setTabValue}></BottomNav>
-    </Grid>
+    <NavigationContext.Provider value={values}>
+      <Grid container>
+        <Header></Header>
+        <Home ></Home>
+        <About></About>
+        <Portfolio></Portfolio>
+        <Skills></Skills>
+        <Services></Services>
+        <Contact></Contact>
+        <BottomNav></BottomNav>
+      </Grid>
+    </NavigationContext.Provider>
+    
   )
 }
 
