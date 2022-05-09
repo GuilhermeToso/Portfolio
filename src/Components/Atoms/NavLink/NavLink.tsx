@@ -1,16 +1,18 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from "react-scroll"
-import { Tab } from '@mui/material'
 import {NavTab} from "./NavLink.styles"
+import { NavigationContext } from '../../../Contexts'
 
 interface NavLinkProps {
     to:string; 
     label:string;
-    state:number;
-    setTabValue: React.Dispatch<React.SetStateAction<number>>;
+    state:number
 }
 
 const NavLink = (props: NavLinkProps) => {
+  
+  const {handleTabValue} = useContext(NavigationContext)
+  
   return (
     <Link
         to={props.to}
@@ -18,7 +20,7 @@ const NavLink = (props: NavLinkProps) => {
         smooth={true} 
         offset={50} 
         duration={500}
-        onClick={()=>{props.setTabValue(props.state)}}
+        onClick={()=>{handleTabValue(props.state)}}
     >
       <NavTab label={props.label} />
     </Link>
