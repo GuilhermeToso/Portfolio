@@ -22,5 +22,6 @@ export const IconButton = styled(Button,{})({
 })
 
 export const WidgetIcon = styled(WidgetsOutlinedIcon,{})({
+    color:"#fff",
     fontSize:"32px"
 })
