@@ -14,7 +14,7 @@ const LogoSection = () => {
           to="home" 
           spy={true} 
           smooth={true} 
-          offset={50} 
+          offset={0} 
           duration={800}
           onClick = {() => {
             handleTabValue(0)
