@@ -1,17 +1,15 @@
 import React from 'react'
-import { AboutGrid } from './About.styles'
 import { PageGrid } from '../Styles'
-import {Typography} from "@mui/material"
+import { AboutTitle } from '../../Molecules/AboutTitle'
+import { AboutPhoto } from '../../Molecules/AboutPhoto'
+import { AboutDescription } from '../../Molecules/AboutDescription'
 
 const About = () => {
   return (
-    <PageGrid item top="100%" id='about'>
-      <Typography
-        variant='h3'
-        fontFamily='Archivo'
-      >
-        About
-      </Typography>
+    <PageGrid item height="100vh" id='about' container>
+      <AboutTitle></AboutTitle>
+      <AboutPhoto></AboutPhoto>
+      <AboutDescription></AboutDescription>
     </PageGrid>
     )
 }
