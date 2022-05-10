@@ -4,7 +4,7 @@ import Image from "next/image"
 export const RubricLogo = () => {
     return (
         <Image
-            src="/images/signature.png"
+            src="/images/signiture-w.png"
             alt='logo'
             layout='fill'
             objectFit='contain'
