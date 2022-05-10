@@ -19,7 +19,7 @@ export const IconButton = styled(Button,{})({
 })
 
 export const LanguageIcon = styled(LanguageRoundedIcon,{})({
-    color:'#111',
+    color:'#fff',
     opacity:"0.8",
     fontSize:"36px",
     '&:active':{
