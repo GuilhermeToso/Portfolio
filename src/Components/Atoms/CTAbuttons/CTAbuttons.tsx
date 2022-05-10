@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { CTAbuttonsBox, styles, CTAButton, CTAButtonText } from './CTAbuttons.styles'
+import { CTAbuttonsBox, styles, CTAButton, CTAButtonText, buttonStyle } from './CTAbuttons.styles'
 import { useTranslation } from 'next-i18next'
 import { motion } from 'framer-motion'
 import DownloadIcon from '@mui/icons-material/Download';
@@ -36,30 +36,31 @@ const CTAbuttons = () => {
             style={styles}
         >
             <CTAButton
-              variant="contained"
+              variant="outlined"
               endIcon={<DownloadIcon></DownloadIcon>}
               href="/documents/cv.pdf"
-              sx={{zIndex:"1"}}
+              sx={buttonStyle}
             >
               <CTAButtonText
                 fontFamily={theme.typography.fontFamily.title}
                 fontWeight="600"
+                align='center'
               >
                 {t("cta_button")}
               </CTAButtonText>
             </CTAButton>
             <div style={{width:"10px"}}></div>
-            <Link
-              to="about"
-              spy={true} 
-              smooth={true} 
-              offset={50} 
-              duration={500}
-              onClick={()=>{handleTabValue(1)}}
+            <CTAButton
+              variant="contained"
+              sx={buttonStyle}
             >
-              <CTAButton
-                variant="contained"
-                sx={{zIndex:"1"}}
+              <Link
+                to="about"
+                spy={true} 
+                smooth={true} 
+                offset={0} 
+                duration={500}
+                onClick={()=>{handleTabValue(1)}}
               >
                 <CTAButtonText
                   fontFamily={theme.typography.fontFamily.title}
@@ -67,9 +68,8 @@ const CTAbuttons = () => {
                 >
                   {t("lets_talk")}
                 </CTAButtonText>
-              </CTAButton>
-            </Link>
-            
+              </Link>
+            </CTAButton>
         </motion.div>
     </CTAbuttonsBox>
   )
