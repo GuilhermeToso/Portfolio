@@ -8,7 +8,7 @@ import { Presentation } from '../../Molecules/Presentation'
 const Home = () => {
   
   return (
-    <PageGrid item container top="0%" id='home'>
+    <PageGrid item container height="100vh" id='home'>
       <Presentation></Presentation>
       <HomePhoto></HomePhoto>
       <Image
