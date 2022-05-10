@@ -1,13 +1,11 @@
 import React from 'react'
-import { SocialMediasBox, styles } from './SocialMedias.styles'
-import { useTranslation } from 'next-i18next'
+import { SocialMediasBox, styles, iconsStyle, socialMediaStyles } from './SocialMedias.styles'
 import { motion } from 'framer-motion'
-import { ButtonGroup, IconButton, Button } from '@mui/material'
+import { ButtonGroup, IconButton} from '@mui/material'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { Link } from '@mui/material'
 
 
 const SocialMedias = () => {
@@ -39,41 +37,41 @@ const SocialMedias = () => {
             <ButtonGroup
               size='large'
             >
-                <IconButton
+              <IconButton
+                color="primary" 
+                aria-label="linkedin"
+                size='large'
+                sx={socialMediaStyles}
+                href='https://www.linkedin.com/in/guilherme-toso/'
+              >
+                <LinkedInIcon sx={iconsStyle}/>
+              </IconButton>
+              <IconButton
+                color="primary" 
+                aria-label="github repository"
+                size='large'
+                sx={socialMediaStyles}
+                href='https://github.com/GuilhermeToso'
+              >
+                <GitHubIcon sx={iconsStyle}/>
+              </IconButton>
+              <IconButton
+                color="primary" 
+                aria-label="instagram"
+                size='large'
+                sx={socialMediaStyles}
+                href="https://www.instagram.com/guilhermetoso/"
+              >
+                <InstagramIcon sx={iconsStyle}/>
+              </IconButton>
+              <IconButton
                 color="primary" 
                 aria-label="facebook"
                 size='large'
-                sx={{zIndex:"1"}}
+                sx={socialMediaStyles}
                 href="https://www.facebook.com"
-                >
-                  <FacebookOutlinedIcon></FacebookOutlinedIcon>
-                </IconButton>
-              <IconButton
-              color="primary" 
-              aria-label="instagram"
-              size='large'
-              sx={{zIndex:"1"}}
-              href="https://www.instagram.com/guilhermetoso/"
               >
-                <InstagramIcon></InstagramIcon>
-              </IconButton>
-              <IconButton
-              color="primary" 
-              aria-label="github repository"
-              size='large'
-              sx={{zIndex:"1"}}
-              href='https://github.com/GuilhermeToso'
-              >
-                <GitHubIcon/>
-              </IconButton>
-              <IconButton
-              color="primary" 
-              aria-label="linkedin"
-              size='large'
-              sx={{zIndex:"1"}}
-              href='https://www.linkedin.com/in/guilherme-toso/'
-              >
-                <LinkedInIcon></LinkedInIcon>
+                <FacebookOutlinedIcon sx={iconsStyle}/>
               </IconButton>
             </ButtonGroup>
         </motion.div>
