@@ -20,12 +20,12 @@ export const typographyStyles = {
         lineHeight:fontSizes.xs
     },
     '@media (min-width:1280px)':{
-        fontSize:fontSizes.md,
-        lineHeight:fontSizes.md
+        fontSize:fontSizes.sm,
+        lineHeight:fontSizes.sm
     },
     '@media (min-width:1900px)':{
-        fontSize:fontSizes.lg,
-        lineHeight:fontSizes.lg
+        fontSize:fontSizes.sm,
+        lineHeight:fontSizes.sm
     },
     '@media (max-height: 568px) and (min-width:300px)':{
         fontSize:fontSizes.xxs,
