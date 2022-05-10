@@ -20,7 +20,7 @@ export const PresentationGrid = styled(Grid,{})({
     top:"25%",
     left:"10%",
     '@media (max-width:900px)':{
-        top:"12%",
+        top:"8%",
         left:"0%",
         width:"100%",
         height:"41%"
