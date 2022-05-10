@@ -10,7 +10,12 @@ export const DescriptionBox = styled(Box,{})({
 })
 
 export const typographyStyles = {
-    '@media (min-width:300px)':{
+    '@media (min-width:200px)':{
+        fontSize:'12pt',
+        lineHeight:'12pt',
+        padding:"5% 0 0 0"
+    },
+    '@media (min-width:400px)':{
         fontSize:fontSizes.xxs,
         lineHeight:fontSizes.xxs,
         padding:"5% 0 0 0"
