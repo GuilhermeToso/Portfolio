@@ -34,9 +34,9 @@ const Nav = (props: NavProps) => {
                 >
                     <NavLink to="home" label={router.locale == "en-US" ? t("home") : t("begin")} state={0}></NavLink>
                     <NavLink to="about" label={t("about")} state={1}></NavLink>
-                    <NavLink to="skills" label={t("skills")} state={2}></NavLink>
-                    <NavLink to="services" label={t("services")} state={3}></NavLink>
-                    <NavLink to="portfolio" label={t("portfolio")} state={4}></NavLink>
+                    <NavLink to="portfolio" label={t("portfolio")} state={2}></NavLink>
+                    <NavLink to="skills" label={t("skills")} state={3}></NavLink>
+                    <NavLink to="services" label={t("services")} state={4}></NavLink>
                     <NavLink to="contact" label={t("contact")} state={5}></NavLink>
                 </NavTabs>
             </Container>
