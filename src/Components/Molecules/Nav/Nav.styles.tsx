@@ -13,9 +13,10 @@ export const NavGrid = styled(Grid,{})({
 })
 
 export const NavTabs = styled(Tabs,{})({
+    position:"relative",
     width:"100%",
     height:"50%",
-    margin: "2.5% 0",
+    margin: "0.1% 0",
     '& .MuiTabs-flexContainer':{
         justifyContent:"center",
         justifyItems:"center"
