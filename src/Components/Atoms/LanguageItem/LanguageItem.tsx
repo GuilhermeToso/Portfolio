@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import {MenuItem, Typography, Divider} from "@mui/material"
+import {MenuItem, Typography} from "@mui/material"
 import {NextRouter} from "next/router"
 import {theme} from "../../../styles"
 
@@ -32,7 +32,6 @@ const LanguageItem = (props: LanguageItemProps) => {
                 {props.language}
             </Typography>
         </Link>
-        <Divider/>
     </MenuItem>
     )
 }
