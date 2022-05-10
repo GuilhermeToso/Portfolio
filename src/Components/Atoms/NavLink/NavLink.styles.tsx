@@ -5,7 +5,7 @@ import {theme} from "../../../styles"
 export const NavTab = styled(Tab,{})({
     fontFamily:theme.typography.fontFamily.text,
     fontWeight:"600",
-    fontSize:"12pt",
-    color:"#111",
+    fontSize:"10pt",
+    color:"#fff",
     opacity:"0.8"
 })
