@@ -18,7 +18,7 @@ const NavLink = (props: NavLinkProps) => {
         to={props.to}
         spy={true} 
         smooth={true} 
-        offset={50} 
+        offset={0} 
         duration={500}
         onClick={()=>{handleTabValue(props.state)}}
     >
