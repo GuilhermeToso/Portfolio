@@ -38,7 +38,7 @@ export const HomePhotoGrid = styled(Grid,{})({
   height:"100%",
   '@media (max-width:900px)':{
     width:"100%",
-    height:"70%",
+    height:"59%",
   },
   '@media (max-height: 568px) and (min-width:300px)':{
     width:"50%",
