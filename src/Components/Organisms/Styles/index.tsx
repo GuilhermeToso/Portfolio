@@ -10,5 +10,4 @@ export const PageGrid = styled(Grid,{})((props:PageGridProps) => ({
     width:'100vw',
     height:props.height,
     overflowX:'hidden',
-    border:"1px solid red"
 }))
