@@ -20,7 +20,7 @@ export const CTAButton = styled(Button,{})({
     width:"45%", 
     borderRadius:"25px",
     '@media (max-width: 900px)':{
-        width:'70%'
+        width:'40%'
     },
     '@media (max-height: 568px) and (min-width:300px)':{
         width:'45%'
@@ -50,3 +50,7 @@ export const CTAButtonText = styled(Typography,{})({
         fontSize: "12pt"
     },
 })
+
+export const buttonStyle = {
+    zIndex:"1"
+}
