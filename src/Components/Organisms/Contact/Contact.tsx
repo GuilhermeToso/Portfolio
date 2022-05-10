@@ -4,7 +4,7 @@ import { Typography } from '@mui/material'
 
 const Contact = () => {
   return (
-    <PageGrid item top="500%" id='contact'>
+    <PageGrid item height="100vh" id='contact'>
       <Typography
         variant='h3'
         fontFamily='Archivo'
