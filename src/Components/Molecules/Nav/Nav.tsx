@@ -22,11 +22,9 @@ const Nav = (props: NavProps) => {
         handleTabValue(newValue);
     };
 
-    console.log(tabValue)
-
     return (
         <NavGrid item container justifyContent="center" justifyItems="center" md={8} xs={0}>
-            <Container>
+            <Container sx={{height:"100%"}}>
                 <NavTabs
                  value={tabValue}
                  onChange={handleChange}
