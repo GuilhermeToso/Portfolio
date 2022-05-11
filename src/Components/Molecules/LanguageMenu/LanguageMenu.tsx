@@ -2,7 +2,7 @@ import React from 'react'
 import { LanguagesProps } from "../../Organisms/Header/Header"
 import {Menu} from "./LanguageMenu.styles"
 import {LanguageItem} from "../../Atoms/LanguageItem"
-import { Divider, Grid } from '@mui/material'
+import { Grid } from '@mui/material'
 import {NextRouter} from "next/router"
 
 interface LanguageMenuProps {
