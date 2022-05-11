@@ -38,7 +38,6 @@ const SocialMedias = () => {
               size='large'
             >
               <IconButton
-                color="primary" 
                 aria-label="linkedin"
                 size='large'
                 sx={socialMediaStyles}
@@ -47,7 +46,6 @@ const SocialMedias = () => {
                 <LinkedInIcon sx={iconsStyle}/>
               </IconButton>
               <IconButton
-                color="primary" 
                 aria-label="github repository"
                 size='large'
                 sx={socialMediaStyles}
@@ -56,7 +54,6 @@ const SocialMedias = () => {
                 <GitHubIcon sx={iconsStyle}/>
               </IconButton>
               <IconButton
-                color="primary" 
                 aria-label="instagram"
                 size='large'
                 sx={socialMediaStyles}
@@ -65,7 +62,6 @@ const SocialMedias = () => {
                 <InstagramIcon sx={iconsStyle}/>
               </IconButton>
               <IconButton
-                color="primary" 
                 aria-label="facebook"
                 size='large'
                 sx={socialMediaStyles}
