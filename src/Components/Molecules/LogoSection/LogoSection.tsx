@@ -1,7 +1,8 @@
 import React,{useContext} from 'react'
-import { LogoGrid, LogoContainer, LogoBox, Link } from './LogoSection.styles'
+import { LogoGrid, LogoBox, Link } from './LogoSection.styles'
 import { RubricLogo } from '../../Atoms/Logo'
 import { NavigationContext } from '../../../Contexts'
+import { Container } from '@mui/material'
 
 const LogoSection = () => {
 
@@ -9,7 +10,7 @@ const LogoSection = () => {
 
   return (
     <LogoGrid item xs={2} container>
-      <LogoContainer>
+      <Container>
         <Link 
           to="home" 
           spy={true} 
@@ -24,7 +25,7 @@ const LogoSection = () => {
             <RubricLogo></RubricLogo>
           </LogoBox>
         </Link>
-      </LogoContainer>
+      </Container>
     </LogoGrid>
   )
 }
