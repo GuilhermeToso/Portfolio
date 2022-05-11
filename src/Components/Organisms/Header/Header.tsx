@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { HeaderGrid } from './Header.styles'
 import { LogoSection } from '../../Molecules/LogoSection'
 import { Nav } from '../../Molecules/Nav'
