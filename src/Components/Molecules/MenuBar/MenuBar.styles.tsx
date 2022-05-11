@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Grid } from "@mui/material";
 import { IconButton as Button } from "@mui/material";
 import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
+import { theme } from "../../../styles";
 
 export const MenuBarGrid= styled(Grid,{})({
     display:"none",
@@ -16,12 +17,12 @@ export const MenuBarGrid= styled(Grid,{})({
 
 export const IconButton = styled(Button,{})({
     '&:active':{
-        color: "#1976d2",
+        color: theme.palette.primary.medium,
         transform: "scale(1.2)"
     }
 })
 
 export const WidgetIcon = styled(WidgetsOutlinedIcon,{})({
-    color:"#fff",
+    color:theme.palette.grey.A50,
     fontSize:"32px"
 })

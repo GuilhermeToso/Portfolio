@@ -40,7 +40,7 @@ const Profession = () => {
         >
           <Typography
             fontFamily={theme.typography.fontFamily.title}
-            color="#444"
+            color={theme.palette.grey.A800}
             sx={typographyStyles}
             align="left"
           >

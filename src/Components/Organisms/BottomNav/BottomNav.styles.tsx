@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Paper,Box, Grid } from "@mui/material";
 import { MotionStyle } from "framer-motion";
+import { theme } from "../../../styles";
 
 export const BottomNavBox = styled(Box,{})({
     position:"fixed",
@@ -26,7 +27,7 @@ export const BottomNavPaper = styled(Paper,{})({
     width:"100%",
     height:"100%",
     borderRadius:"25px 25px 0 0",
-    backgroundColor:"#f5f5f5",
+    backgroundColor:theme.palette.grey.A100,
 })
 
 export const BottomNavGrid = styled(Grid,{})({

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Box, Typography, Button } from "@mui/material";
 import { MotionStyle } from "framer-motion";
+import { theme } from "../../../styles";
 
 export const CTAbuttonsBox = styled(Box,{})({
     position:"relative",
@@ -52,5 +53,6 @@ export const CTAButtonText = styled(Typography,{})({
 })
 
 export const buttonStyle = {
-    zIndex:"1"
+    zIndex:"1",
+    color: theme.palette.primary.medium
 }

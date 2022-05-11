@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Box } from "@mui/material";
 import { MotionStyle } from "framer-motion";
+import { theme } from "../../../styles";
 
 export const SocialMediasBox = styled(Box,{})({
     position:"relative",
@@ -14,7 +15,8 @@ export const styles: MotionStyle = {
 }
 
 export const socialMediaStyles ={
-    zIndex:"1"
+    zIndex:"1",
+    color: theme.palette.primary.medium
 }
 
 export const iconsStyle = {

@@ -34,7 +34,7 @@ const Salution = () => {
         >
           <Typography
             fontFamily={theme.typography.fontFamily.title}
-            color="#333"
+            color={theme.palette.grey.A800}
             align="left"
             sx={typographyStyles}
           >

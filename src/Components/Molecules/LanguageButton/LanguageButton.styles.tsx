@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Grid } from "@mui/material";
 import { IconButton as Button } from "@mui/material";
 import LanguageRoundedIcon from '@mui/icons-material/LanguageRounded';
+import { theme } from "../../../styles";
 
 export const LanguageGrid= styled(Grid,{})({
     width:"100%",
@@ -13,7 +14,7 @@ export const LanguageGrid= styled(Grid,{})({
 
 export const IconButton = styled(Button,{})({
     '&:active':{
-        color: "#1976d2",
+        color: theme.palette.primary.medium,
         transform: "scale(1.2)"
     }
 })
@@ -23,7 +24,7 @@ export const LanguageIcon = styled(LanguageRoundedIcon,{})({
     opacity:"0.8",
     fontSize:"36px",
     '&:active':{
-        color: "#1976d2",
+        color: theme.palette.primary.medium,
     },
     '@media (max-width:960px)':{
         fontSize:"32px"

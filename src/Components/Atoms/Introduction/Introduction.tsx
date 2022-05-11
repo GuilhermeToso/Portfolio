@@ -38,7 +38,7 @@ const Introduction = () => {
         <Typography
           fontFamily={theme.typography.fontFamily.title}
           fontWeight="600"
-          color="#2f2f2f"
+          color={theme.palette.grey.A900}
           sx={typographyStyles}
           align="left"
         >

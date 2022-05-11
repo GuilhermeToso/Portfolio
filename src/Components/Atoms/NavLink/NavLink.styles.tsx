@@ -6,6 +6,6 @@ export const NavTab = styled(Tab,{})({
     fontFamily:theme.typography.fontFamily.text,
     fontWeight:"600",
     fontSize:"10pt",
-    color:"#fff",
+    color:theme.palette.grey.A50,
     opacity:"0.8"
 })

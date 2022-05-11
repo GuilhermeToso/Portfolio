@@ -41,7 +41,7 @@ const Description = () => {
           <Typography
             fontFamily={theme.typography.fontFamily.text}
             fontWeight="300"
-            color="#666"
+            color={theme.palette.grey.A700}
             sx={typographyStyles}
             align="left"
           >

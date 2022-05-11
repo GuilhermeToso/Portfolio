@@ -27,7 +27,7 @@ const LanguageItem = (props: LanguageItemProps) => {
                 variant='h6'
                 fontFamily={theme.typography.fontFamily.title}
                 fontWeight='500'
-                color="#111"
+                color={theme.palette.grey.A900}
             >
                 {props.language}
             </Typography>
