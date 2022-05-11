@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
-import { HomePhotoContainer, HomePhotoBox, style, HomePhotoGrid } from './HomePhoto.styles'
+import { HomePhotoContainer, style, HomePhotoGrid } from './HomePhoto.styles'
 import Image from 'next/image'
 
 
