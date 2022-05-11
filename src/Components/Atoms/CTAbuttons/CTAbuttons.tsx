@@ -65,6 +65,7 @@ const CTAbuttons = () => {
                 <CTAButtonText
                   fontFamily={theme.typography.fontFamily.title}
                   fontWeight="600"
+                  color="#fff"
                 >
                   {t("lets_talk")}
                 </CTAButtonText>
