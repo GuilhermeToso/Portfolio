@@ -8,11 +8,6 @@ export const LogoGrid = styled(Grid,{})({
     height:'100%'
 })
 
-export const LogoContainer = styled(Container,{})({
-    // marginTop: '8px', 
-    // padding:"0 25%"
-})
-
 export const Link = styled(Scroll,{})({
     cursor:"pointer"
 })
