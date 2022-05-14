@@ -3,12 +3,13 @@ import React from 'react'
 import { HomePhoto } from '../../Molecules/HomePhoto'
 import { PageGrid } from '../Styles'
 import { Presentation } from '../../Molecules/Presentation'
+import { homeStyles } from './Home.styles'
 
 
 const Home = () => {
   
   return (
-    <PageGrid item container height="100vh" id='home'>
+    <PageGrid item container height="100vh" id='home' sx={homeStyles}>
       <Presentation></Presentation>
       <HomePhoto></HomePhoto>
       <Image
