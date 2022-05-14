@@ -6,12 +6,21 @@ const fontSizes = theme.typography.fontSizes
 
 export const AboutTitleGrid = styled(Grid,{})({
     position:"relative",
-    height:"20%",
-    border:"1px solid red"
+    
 })
 
 export const typographyStyle = {
+    margin: "25% 0 0 0",
+    '@media (min-width:300px)':{
+        fontSize:fontSizes.md
+    },
     '@media (min-width:900px)':{
+        fontSize:fontSizes.md
+    },
+    '@media (min-width:1536px)':{
+        fontSize:fontSizes.lg
+    },
+    '@media (min-width:1900px)':{
         fontSize:fontSizes.xlg
     }
 }
