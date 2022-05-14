@@ -8,5 +8,8 @@ export const HeaderGrid = styled(Grid, {})({
     height:'6vh',
     zIndex:"10",
     backgroundColor:theme.palette.grey.A900,
-    opacity:"0.9"
+    opacity:"0.9",
+    '@media (max-height: 568px) and (min-width:300px)':{
+        height:"10vh"
+    }
 })
