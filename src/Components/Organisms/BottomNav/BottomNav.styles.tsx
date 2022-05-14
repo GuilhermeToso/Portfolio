@@ -10,10 +10,10 @@ export const BottomNavBox = styled(Box,{})({
     top:"80%",
     borderRadius:"25px 25px 0 0",
     '@media (max-height: 568px) and (min-width:300px)':{
-        width:"50%",
-        height:"35vh",
-        top:"65%",
-        left:"25%",
+        width:"30%",
+        height:"100vh",
+        top:"0%",
+        left:"70%",
     },
 })
 
