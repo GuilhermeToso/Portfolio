@@ -2,33 +2,32 @@ import styled from "@emotion/styled";
 import { Box } from "@mui/system";
 import { Grid } from "@mui/material";
 
-export const PresentationBox = styled(Box,{})({
-    position:"relative",
-    width:"50%",
-    height:"50%",
-    top:"35%",
-    '@media (max-width:900px)':{
-        top:"15%",
-        width:"100%"
-    }
-})
 
 export const PresentationGrid = styled(Grid,{})({
     position:"relative",
+    flex: "6",
     width:"50%",
-    height:"50%",
-    top:"25%",
-    left:"10%",
+    height:"100%",
     '@media (max-width:900px)':{
-        top:"8%",
-        left:"0%",
         width:"100%",
-        height:"41%"
+        height:"50%",
+        flex:"12"
     },
     '@media (max-height: 568px) and (min-width:300px)':{
-        top:"15%",
-        left:"0%",
-        width:"100%",
-        height:"41%"
+        width:"50%",
+        height:"100%",
+        flex:"6"
+    },
+     
+})
+
+export const PresentationBox = styled(Box,{})({
+    position:"relative",
+    width:"100%",
+    height:"70%",
+    top:"30%",
+    '@media (max-height: 568px) and (min-width:300px)':{
+        height:"90%",
+        top:"10%"
     },
 })
