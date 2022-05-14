@@ -1,51 +1,27 @@
 import React from 'react'
-import { typographyStyles, IntroductionBox} from './Introduction.styles'
-import { motion, MotionStyle } from 'framer-motion'
+import { typographyStyles } from './Introduction.styles'
 import { Typography } from '@mui/material'
 import { theme } from '../../../styles'
+import { PresentationElement } from '../../Styles'
 
 const Introduction = () => {
 
-  const variations = {
-      hidden:{
-          opacity: 0,
-          left:"0%"
-      },
-      visible:{
-        opacity: 1,
-        left:"15%",
-        transition:{
-            delay:0.4,
-            duration:1
-        }
-    }
-  }
-
-  const styles: MotionStyle = {
-    position:"relative",
-    width: "85%", 
-    height:"100%", 
-}
-  
   return (
-    <IntroductionBox>
-      <motion.div
-          variants={variations}
-          initial="hidden"
-          animate="visible"
-          style={styles}
+    <PresentationElement
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="200"
+    >
+      <Typography
+        fontFamily={theme.typography.fontFamily.title}
+        fontWeight="600"
+        color={theme.palette.grey.A900}
+        sx={typographyStyles}
+        align="left"
       >
-        <Typography
-          fontFamily={theme.typography.fontFamily.title}
-          fontWeight="600"
-          color={theme.palette.grey.A900}
-          sx={typographyStyles}
-          align="left"
-        >
-          GUILHERME M. TOSO
-        </Typography>
-      </motion.div>
-    </IntroductionBox>
+        GUILHERME M. TOSO
+      </Typography>
+    </PresentationElement>
   )
 }
 
