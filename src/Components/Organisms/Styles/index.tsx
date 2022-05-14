@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { Grid } from "@mui/material";
 
 interface PageGridProps {
-    height:string;
+    height?:string;
 }
 
 export const PageGrid = styled(Grid,{})((props:PageGridProps) => ({
