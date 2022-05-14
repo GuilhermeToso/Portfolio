@@ -1,25 +1,33 @@
 import styled from "@emotion/styled";
-import { Box, Typography, Button } from "@mui/material";
-import { MotionStyle } from "framer-motion";
+import { Typography, Button, keyframes } from "@mui/material";
 import { theme } from "../../../styles";
 
-export const CTAbuttonsBox = styled(Box,{})({
-    position:"relative",
-    width:"100%",
-})
+const slideIn = keyframes`
+    0% {
+        transform: translateX(0%);
+        opacity:0
+    }
+    50% {
+        transform: translateX(-15%);
+        opacity:0
+    }
+    100% {
+        transform: translateX(0%);
+        opacity:1
+    }
+`
 
-export const styles: MotionStyle = {
-    position:"relative",
-    width:"75%", 
-    height:"100%", 
-    display:"flex", 
-    direction:"ltr"
+export const presentationStyle = {
+    display:"flex",
+    direction:"ltr",
+    animation: `${slideIn} 2s ease-in`    
 }
 
-
 export const CTAButton = styled(Button,{})({
+    position:"relative",
     width:"45%", 
     borderRadius:"25px",
+    cursor:"pointer",
     '@media (max-width: 900px)':{
         width:'40%'
     },
@@ -53,6 +61,6 @@ export const CTAButtonText = styled(Typography,{})({
 })
 
 export const buttonStyle = {
-    zIndex:"1",
+    zIndex:"2",
     color: theme.palette.primary.medium
 }
