@@ -1,24 +1,18 @@
-import styled from "@emotion/styled";
-import { Box } from "@mui/material";
 import { theme } from "../../../styles";
 
 const fontSizes = theme.typography.fontSizes
 
-export const DescriptionBox = styled(Box,{})({
-    position:"relative",
-    width:"100%",
-})
 
 export const typographyStyles = {
     '@media (min-width:200px)':{
         fontSize:'12pt',
         lineHeight:'12pt',
-        padding:"5% 0 0 0"
+        padding:"2.5% 0 2.5% 0"
     },
     '@media (min-width:400px)':{
         fontSize:fontSizes.xxs,
         lineHeight:fontSizes.xxs,
-        padding:"5% 0 0 0"
+        padding:"2.5% 0 2.5% 0"
     },
     '@media (min-width:960px)':{
         fontSize:fontSizes.xs,
