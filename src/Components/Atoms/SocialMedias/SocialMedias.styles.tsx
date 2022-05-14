@@ -1,17 +1,26 @@
-import styled from "@emotion/styled";
-import { Box } from "@mui/material";
-import { MotionStyle } from "framer-motion";
 import { theme } from "../../../styles";
+import { keyframes } from "@mui/material";
 
-export const SocialMediasBox = styled(Box,{})({
-    position:"relative",
-    width:"100%",
-})
 
-export const styles: MotionStyle = {
-    position:"relative",
-    width:"75%", 
-    height:"100%", 
+const slideIn = keyframes`
+    0% {
+        transform: translateX(0%);
+        opacity:0
+    }
+    44.44% {
+        transform: translateX(-15%);
+        opacity:0
+    }
+    100% {
+        transform: translateX(0%);
+        opacity:1
+    }
+`
+
+export const presentationStyle = {
+    display:"flex",
+    direction:"ltr",
+    animation: `${slideIn} 1.8s ease-in`    
 }
 
 export const socialMediaStyles ={
